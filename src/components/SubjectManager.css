@@ -1,0 +1,155 @@
+.subjects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.subject-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.subject-btn:hover {
+    background-color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+.subject-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.subject-add-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: 2px dashed var(--text-tertiary);
+}
+
+.subject-add-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.add-subject-form {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subject-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--text-tertiary);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: var(--surface-color);
+}
+
+.subject-input:focus {
+    border-color: var(--primary);
+}
+
+.color-picker {
+    margin: 1.25rem 0;
+}
+
+.color-picker label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.color-option {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--surface-color), 0 0 0 4px currentColor;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn-cancel {
+    color: var(--text-secondary);
+    background-color: transparent;
+}
+
+.btn-cancel:hover {
+    background-color: var(--text-tertiary);
+    color: var(--surface-color);
+}
+
+.btn-submit {
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
